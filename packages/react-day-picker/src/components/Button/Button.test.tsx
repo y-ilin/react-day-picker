@@ -1,8 +1,28 @@
-test.todo('should have type `button`');
-test.todo('should apply the `button_reset` class name');
-test.todo('should apply the `button` class name');
-test.todo('should apply the class name from props');
+import { RenderResult } from '@testing-library/react';
+import React from 'react';
 
-test.todo('should apply the `button_reset` style');
-test.todo('should apply the `button` style');
-test.todo('should apply the style from props');
+import { customRender } from 'test';
+
+import { Button } from 'components';
+
+import { ButtonProps } from './ButtonProps';
+
+const setup = (
+  props?: ButtonProps & React.RefAttributes<HTMLButtonElement>
+): RenderResult => {
+  return customRender(<Button {...props} />);
+};
+test('should render correctly', () => {
+  const { container } = setup();
+  expect(container.firstChild).toMatchSnapshot();
+});
+
+test('should add the class name from props', () => {
+  const { container } = setup({ className: 'foo' });
+  expect(container.firstChild).toMatchSnapshot();
+});
+
+test('should add the inline style from props', () => {
+  const { container } = setup({ style: { color: 'red' } });
+  expect(container.firstChild).toMatchSnapshot();
+});

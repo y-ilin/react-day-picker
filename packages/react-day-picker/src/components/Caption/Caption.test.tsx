@@ -1,5 +1,26 @@
-test.todo('should apply the `caption` class name');
-test.todo('should apply the `caption` style');
+import { RenderResult } from '@testing-library/react';
+import React from 'react';
+
+import { customRender } from 'test';
+import tk from 'timekeeper';
+
+import { Caption, CaptionProps } from 'components';
+
+const FrozenDate = new Date(2020, 5);
+
+beforeEach(() => tk.freeze(FrozenDate));
+afterEach(() => tk.reset());
+
+const setup = (props?: CaptionProps): RenderResult => {
+  return customRender(
+    <Caption displayMonth={new Date()} displayIndex={1} {...props} />
+  );
+};
+
+test('should render correctly', () => {
+  const { container } = setup();
+  expect(container.firstChild).toMatchSnapshot();
+});
 
 describe('when navigation is disabled', () => {
   test.todo('should display the caption label');
@@ -59,3 +80,5 @@ describe('when navigation is enabled', () => {
     });
   });
 });
+
+tk.reset();
