@@ -1,23 +1,23 @@
-test.todo('should apply the `caption` classname');
+test.todo('should apply the `caption` class name');
 test.todo('should apply the `caption` style');
 
 describe('when navigation is disabled', () => {
   test.todo('should display the caption label');
-  test.todo('should not render the dropdowns');
+  test.todo('should not render the drop-downs');
   test.todo('should not render the navigation');
 });
 
 describe('when navigation is enabled', () => {
-  describe('when the caption layout is "dropdown"', () => {
-    test.todo('should apply the `caption_dropdowns` classname');
-    test.todo('should apply the `caption_dropdowns` style');
-    test.todo('should render the months dropdown');
-    test.todo('should render the years dropdown');
-    describe('when a month is selected from the month dropdown', () => {
+  describe('when the caption layout is "drop-down"', () => {
+    test.todo('should apply the `caption_drop-downs` class name');
+    test.todo('should apply the `caption_drop-downs` style');
+    test.todo('should render the months drop-down');
+    test.todo('should render the years drop-down');
+    describe('when a month is selected from the month drop-down', () => {
       test.todo('should go to the selected month');
       test.todo('should cal the `onMonthChange` callback');
     });
-    describe('when a year is selected from the year dropdown', () => {
+    describe('when a year is selected from the year drop-down', () => {
       test.todo('should go to the selected month');
       test.todo('should cal the `onMonthChange` callback');
     });
