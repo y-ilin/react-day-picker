@@ -10,7 +10,7 @@ import { IconNext } from './IconNext';
 const setup = (props?: StyledComponentProps): RenderResult => {
   return customRender(<IconNext {...props} />);
 };
-test('should render correctly', () => {
+test('should render correctly with style and class name', () => {
   const { container } = setup({ className: 'foo', style: { color: 'red' } });
   expect(container.firstChild).toMatchSnapshot();
 });

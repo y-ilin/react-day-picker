@@ -4,5 +4,6 @@ import { MonthChangeEventHandler } from 'types';
 export interface MonthsDropdownProps {
   /** The month where the dropdown is displayed. */
   displayMonth: Date;
+  /** Event handler when the dropdown changes */
   onChange: MonthChangeEventHandler;
 }

@@ -10,7 +10,7 @@ import { IconDropdown } from './IconDropdown';
 const setup = (props?: StyledComponentProps): RenderResult => {
   return customRender(<IconDropdown {...props} />);
 };
-test('should render correctly', () => {
+test('should render correctly with style and class name', () => {
   const { container } = setup({ className: 'foo', style: { color: 'red' } });
   expect(container.firstChild).toMatchSnapshot();
 });
