@@ -4,7 +4,7 @@
 - Add `null` to `RangeModifier` ([#1037](https://github.com/gpbl/react-day-picker/issues/1037))
 - Corrected typing for `RangerModifier` ([#1065](https://github.com/gpbl/react-day-picker/issues/1065))
 - Add React 17 as peer dependency ([#1075](https://github.com/gpbl/react-day-picker/issues/1075))
-- Add `aria-polite` to announce month change during navigation ([#1033](https://github.com/gpbl/react-day-picker/issues/1033))
+- Add `aria-polite` to announce month change during navigation ([#1038](https://github.com/gpbl/react-day-picker/pull/1038))
 
 ### [v7.4.8](https://github.com/gpbl/react-day-picker/tree/v7.4.8) (2020-04-19)
 
